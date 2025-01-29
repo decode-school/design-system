@@ -27,10 +27,8 @@ createRoot(document.getElementById('root')!).render(
             <Button variant="outline">Outline</Button>
           </section>
           <hr />
-          <section className='flex flex-col gap-2 bg-secondary p-8'>
-            <Input type="text" placeholder="Recherche" />
-            <Input type="search" placeholder="Recherche" icon="search" />
-          </section>
+          <Input type="text" placeholder="Recherche" />
+          <Input type="search" placeholder="Recherche" icon="search" />
           <hr />
         </div>
       </main>
