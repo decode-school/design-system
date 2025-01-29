@@ -5,7 +5,7 @@ import { Button } from '@/package/ui/components/ui/button'
 import { Input } from '@/package/ui/components/ui/input'
 import { ThemeProvider } from "@/package/ui/providers/theme-provider"
 import ModeToggle from './package/ui/components/functionnal/mode-toggle'
-import { Select, SelectContent, SelectGroup, SelectItem, SelectLabel, SelectTrigger, SelectValue } from './package/ui/components/ui/select'
+import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from './package/ui/components/ui/select'
 
 
 
@@ -19,7 +19,6 @@ createRoot(document.getElementById('root')!).render(
         </header>
         <div className='container mx-auto p-4 space-y-4'>
           <section className='flex gap-4 flex-wrap'>
-            <Button>Click me</Button>
             <Button variant="primary">Primary</Button>
             <Button variant="secondary">Secondary</Button>
             <Button variant="destructive">Destructive</Button>
