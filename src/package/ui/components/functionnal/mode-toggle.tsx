@@ -1,11 +1,12 @@
 import { Moon, Sun } from "lucide-react";
 import { useTheme } from "../../providers/theme-provider";
 import { Button } from "../ui/button";
+import { cn } from "../../lib/utils";
 
-export default function ModeToggle({ lightText, darkText }: { lightText?: string, darkText?: string }) {
+export default function ModeToggle({ lightText, darkText, className }: { lightText?: string, darkText?: string, className?: string }) {
     const { setTheme, theme } = useTheme()
     return (
-        <div className="inline-flex p-2 gap-2 bg-background rounded-xl">
+        <div className={cn("inline-flex p-1 gap-2 bg-background rounded-xl", className)}>
             <Button
                 size="sm"
                 variant={theme === "light" ? "primary" : "ghost"}

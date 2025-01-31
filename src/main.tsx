@@ -5,10 +5,9 @@ import { Button } from '@/package/ui/components/ui/button'
 import { Input } from '@/package/ui/components/ui/input'
 import { ThemeProvider } from "@/package/ui/providers/theme-provider"
 import ModeToggle from './package/ui/components/functionnal/mode-toggle'
-import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from './package/ui/components/ui/select'
-import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from './package/ui/components/ui/accordion'
 import { AlertDialog, AlertDialogAction, AlertDialogCancel, AlertDialogContent, AlertDialogDescription, AlertDialogFooter, AlertDialogHeader, AlertDialogTitle, AlertDialogTrigger } from './package/ui/components/ui/alert-dialog'
 import { Trash } from 'lucide-react'
+import { Avatar, AvatarFallback, AvatarImage } from './package/ui/components/ui/avatar'
 
 
 
@@ -18,7 +17,13 @@ createRoot(document.getElementById('root')!).render(
       <main>
         <header className='container mx-auto p-4 flex justify-between items-center'>
           <h1 className='text-4xl font-bold'>Décode Design System</h1>
-          <ModeToggle lightText='light' darkText='dark' />
+          <div className='flex items-center gap-4'>
+            <ModeToggle lightText='light' darkText='dark' className='bg-secondary' />
+            <Avatar>
+              <AvatarImage src="https://avatars.githubusercontent.com/u/12610160?v=4" alt="avatar" />
+              <AvatarFallback>AM</AvatarFallback>
+            </Avatar>
+          </div>
         </header>
         <div className='container mx-auto p-4 space-y-4'>
           <section className='flex gap-4 flex-wrap'>
