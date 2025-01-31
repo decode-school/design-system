@@ -7,6 +7,8 @@ import { ThemeProvider } from "@/package/ui/providers/theme-provider"
 import ModeToggle from './package/ui/components/functionnal/mode-toggle'
 import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from './package/ui/components/ui/select'
 import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from './package/ui/components/ui/accordion'
+import { AlertDialog, AlertDialogAction, AlertDialogCancel, AlertDialogContent, AlertDialogDescription, AlertDialogFooter, AlertDialogHeader, AlertDialogTitle, AlertDialogTrigger } from './package/ui/components/ui/alert-dialog'
+import { Trash } from 'lucide-react'
 
 
 
@@ -31,40 +33,30 @@ createRoot(document.getElementById('root')!).render(
           <Input type="text" placeholder="Recherche" />
           <Input type="search" placeholder="Recherche" icon="search" />
           <hr />
-          <Select>
-            <SelectTrigger>
-              <SelectValue placeholder="Choisissez une année" />
-            </SelectTrigger>
-            <SelectContent>
-              <SelectItem value="2023">2023/2024</SelectItem>
-              <SelectItem value="2024">2024/2025</SelectItem>
-              <SelectItem value="2025">2025/2026</SelectItem>
-              <SelectItem value="2026">2026/2027</SelectItem>
-            </SelectContent>
-          </Select>
-          <hr />
-          <Accordion type="single" collapsible className="w-full">
-            <AccordionItem value="item-1">
-              <AccordionTrigger>Is it accessible?</AccordionTrigger>
-              <AccordionContent>
-                Yes. It adheres to the WAI-ARIA design pattern.
-              </AccordionContent>
-            </AccordionItem>
-            <AccordionItem value="item-2">
-              <AccordionTrigger>Is it styled?</AccordionTrigger>
-              <AccordionContent>
-                Yes. It comes with default styles that matches the other
-                components&apos; aesthetic.
-              </AccordionContent>
-            </AccordionItem>
-            <AccordionItem value="item-3">
-              <AccordionTrigger>Is it animated?</AccordionTrigger>
-              <AccordionContent>
-                Yes. It&apos;s animated by default, but you can disable it if you
-                prefer.
-              </AccordionContent>
-            </AccordionItem>
-          </Accordion>
+          <AlertDialog>
+            <AlertDialogTrigger>
+              <Button variant="destructive"><Trash /> Delete account</Button>
+            </AlertDialogTrigger>
+            <AlertDialogContent>
+              <AlertDialogHeader>
+                <AlertDialogTitle>Are you absolutely sure?</AlertDialogTitle>
+                <AlertDialogDescription>
+                  This action cannot be undone. This will permanently delete your account
+                  and remove your data from our servers.
+                </AlertDialogDescription>
+              </AlertDialogHeader>
+              <AlertDialogFooter>
+                <AlertDialogCancel>Cancel</AlertDialogCancel>
+                <Button variant="destructive" asChild>
+                  <AlertDialogAction>
+                    Delete
+                  </AlertDialogAction>
+                </Button>
+              </AlertDialogFooter>
+            </AlertDialogContent>
+          </AlertDialog>
+
+
         </div>
       </main>
     </ThemeProvider>
