@@ -7,7 +7,8 @@ const meta: Meta<typeof Button> = {
   component: Button,
   argTypes: {
     children: {
-      type: "ReactNode",
+      type: "string",
+      description: "ReactNode",
       control: { type: 'text' },
     },
     variant: {
