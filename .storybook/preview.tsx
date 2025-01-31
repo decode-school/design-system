@@ -1,5 +1,7 @@
+
 import type { Preview } from "@storybook/react";
 import { ThemeProvider } from "../src/package/ui/providers/theme-provider"
+import { withThemeByClassName } from "@storybook/addon-themes";
 import React from "react";
 import "../src/index.css"
 
@@ -14,12 +16,19 @@ const preview: Preview = {
     },
   },
   decorators: [
-    (Story) => {
+    withThemeByClassName({
+      themes: {
+        light: 'light',
+        dark: 'dark',
+      },
+      defaultTheme: 'light',
+    }),
+    (Story, storyContext) => {
+
       return (
-        <ThemeProvider defaultTheme="light">
+        <ThemeProvider defaultTheme={storyContext.parameters.theme}>
           <Story />
         </ThemeProvider>
-
       )
     }
   ]
