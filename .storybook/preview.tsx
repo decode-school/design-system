@@ -23,10 +23,9 @@ const preview: Preview = {
       },
       defaultTheme: 'light',
     }),
-    (Story, storyContext) => {
-
+    (Story) => {
       return (
-        <ThemeProvider defaultTheme={storyContext.parameters.theme}>
+        <ThemeProvider defaultTheme="light">
           <Story />
         </ThemeProvider>
       )

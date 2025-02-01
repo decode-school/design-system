@@ -8,6 +8,7 @@ import ModeToggle from './package/ui/components/functionnal/mode-toggle'
 import { AlertDialog, AlertDialogAction, AlertDialogCancel, AlertDialogContent, AlertDialogDescription, AlertDialogFooter, AlertDialogHeader, AlertDialogTitle, AlertDialogTrigger } from './package/ui/components/ui/alert-dialog'
 import { Trash } from 'lucide-react'
 import { Avatar, AvatarFallback, AvatarImage } from './package/ui/components/ui/avatar'
+import { Badge } from './package/ui/components/ui/badge'
 
 
 
@@ -60,7 +61,8 @@ createRoot(document.getElementById('root')!).render(
               </AlertDialogFooter>
             </AlertDialogContent>
           </AlertDialog>
-
+          <hr />
+          <Badge variant="default">Badge</Badge>
 
         </div>
       </main>
