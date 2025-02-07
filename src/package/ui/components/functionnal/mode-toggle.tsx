@@ -8,14 +8,14 @@ export default function ModeToggle({ lightText, darkText, className }: { lightTe
     return (
         <div className={cn("inline-flex p-1 gap-2 bg-background rounded-xl", className)}>
             <Button
-                size="sm"
+                size="xs"
                 variant={theme === "light" ? "primary" : "ghost"}
                 onClick={() => setTheme("light")}
             >
                 <Sun />{lightText}
             </Button>
             <Button
-                size="sm"
+                size="xs"
                 variant={theme === "dark" ? "primary" : "ghost"}
                 onClick={() => setTheme("dark")}
             >
