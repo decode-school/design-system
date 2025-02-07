@@ -1,14 +1,12 @@
 
 import ModeToggle from './package/ui/components/functionnal/mode-toggle'
 import { Avatar, AvatarFallback, AvatarImage } from './package/ui/components/ui/avatar'
-import { Badge } from './package/ui/components/ui/badge'
 
 import { Button } from '@/package/ui/components/ui/button'
 import { Input } from '@/package/ui/components/ui/input'
 import { WeekCalendar } from './package/ui/components/ui/week-calendar'
 import { useState } from 'react'
-import { Calendar } from './package/ui/components/ui/calendar'
-import { Carousel, CarouselContent, CarouselIndicators, CarouselItem, CarouselNext, CarouselPrevious } from './package/ui/components/ui/carousel'
+import { Carousel, CarouselContent, CarouselIndicators, CarouselItem } from './package/ui/components/ui/carousel'
 import { Card, CardContent, CardFooter, CardHeader, CardTitle } from './package/ui/components/ui/card'
 import { Bell, ChevronRight, ZoomIn } from 'lucide-react'
 
