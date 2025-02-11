@@ -10,7 +10,7 @@ import { Carousel, CarouselContent, CarouselIndicators, CarouselItem } from './p
 import { Card, CardContent, CardFooter, CardHeader, CardTitle } from './package/ui/components/ui/card'
 import { Bell, ChevronRight, ZoomIn } from 'lucide-react'
 import { DatePicker } from './package/ui/components/ui/date-picker'
-
+import { DateRangePicker } from './package/ui/components/ui/date-range-picker'
 
 
 function Header() {
@@ -189,7 +189,12 @@ export default function App() {
                     <section className='m-4 p-4 bg-background'>
                         <h2>Test area</h2>
                         <Input type="search" placeholder="Recherche" icon="search" className='w-[280px] mb-2' />
-                        <DatePicker value={new Date()} onChange={(date) => console.log(date)} />
+                        <DatePicker value={new Date()} onChange={(date) => console.log(date)} className='mb-2' />
+                        <DateRangePicker
+                            value={undefined}
+                            onChange={(dateRange) => console.log(dateRange)}
+                            placeholder='Choisir une période' className='mb-2' />
+
                     </section>
                 </section>
             </main>
