@@ -3,7 +3,7 @@ import type { Preview } from "@storybook/react";
 import { ThemeProvider } from "../src/package/ui/providers/theme-provider"
 import { withThemeByClassName } from "@storybook/addon-themes";
 import React from "react";
-import "../src/index.css"
+import "../src/index.css";
 
 const preview: Preview = {
   tags: ['autodocs'],
