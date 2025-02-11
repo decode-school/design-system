@@ -12,7 +12,7 @@ const Input = React.forwardRef<HTMLInputElement, InputProps>(
     if (icon) {
       return (
         <div className="relative w-full">
-          <DynamicIcon name={icon} className="text-muted-foreground absolute left-2 top-1/2 -translate-y-1/2" />
+          <DynamicIcon name={icon} className="h-5 w-5 text-muted-foreground absolute left-3 top-1/2 -translate-y-1/2" />
           <input
             type={type}
             className={cn(

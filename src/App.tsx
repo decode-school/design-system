@@ -9,6 +9,7 @@ import { useState } from 'react'
 import { Carousel, CarouselContent, CarouselIndicators, CarouselItem } from './package/ui/components/ui/carousel'
 import { Card, CardContent, CardFooter, CardHeader, CardTitle } from './package/ui/components/ui/card'
 import { Bell, ChevronRight, ZoomIn } from 'lucide-react'
+import { DatePicker } from './package/ui/components/ui/date-picker'
 
 
 
@@ -185,6 +186,11 @@ export default function App() {
                             </div>
                         </section>
                     </div>
+                    <section className='m-4 p-4 bg-background'>
+                        <h2>Test area</h2>
+                        <Input type="search" placeholder="Recherche" icon="search" className='w-[280px] mb-2' />
+                        <DatePicker value={new Date()} onChange={(date) => console.log(date)} />
+                    </section>
                 </section>
             </main>
         </div>
