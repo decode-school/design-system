@@ -11,6 +11,7 @@ import { Card, CardContent, CardFooter, CardHeader, CardTitle } from './package/
 import { Bell, ChevronRight, ZoomIn } from 'lucide-react'
 import { DatePicker } from './package/ui/components/ui/date-picker'
 import { DateRangePicker } from './package/ui/components/ui/date-range-picker'
+import FormExemple from './components/FormExemple'
 
 
 function Header() {
@@ -194,6 +195,7 @@ export default function App() {
                             value={undefined}
                             onChange={(dateRange) => console.log(dateRange)}
                             placeholder='Choisir une période' className='mb-2' />
+                        <FormExemple />
 
                     </section>
                 </section>
