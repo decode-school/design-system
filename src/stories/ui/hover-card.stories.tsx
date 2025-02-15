@@ -13,7 +13,7 @@ export default meta;
 
 type Story = StoryObj<typeof meta>;
 
-export const BaseForm: Story = {
+export const Default: Story = {
     render: ({ ...args }) => (
         <section className='flex justify-center h-[200px]'>
             <HoverCard {...args}>
