@@ -1,5 +1,5 @@
 import { Meta, StoryObj } from '@storybook/react';
-import { DecodeLogo, DecodeLogoFull } from "@/package/ui/assets/svg";
+import { DecodeLogoFull } from "@/package/ui/assets/svg";
 import { Select, SelectTrigger, SelectValue } from "@/package/ui/components/ui/select";
 import {
     Sidebar,
