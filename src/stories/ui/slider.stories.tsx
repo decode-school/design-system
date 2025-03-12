@@ -6,6 +6,7 @@ const meta = {
   component: Slider,
   argTypes: {
     defaultValue: {
+        // @ts-expect-error // @ts-ignore
         type: 'number[]',
     },
     max: {
