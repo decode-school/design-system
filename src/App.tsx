@@ -12,6 +12,8 @@ import { Bell, ChevronRight, ZoomIn } from 'lucide-react'
 import { DatePicker } from './package/ui/components/ui/date-picker'
 import { DateRangePicker } from './package/ui/components/ui/date-range-picker'
 import FormExemple from './components/FormExemple'
+import { SidebarProvider, SidebarTrigger } from './package/ui/components/ui/sidebar'
+import { AppSidebar } from './components/Sidebar'
 
 
 function Header() {
@@ -19,6 +21,7 @@ function Header() {
         <header className='container mx-auto p-4 flex justify-between items-center'>
             <Input type="search" placeholder="Recherche" icon="search" className='bg-background max-w-[350px]' />
             <div className='flex items-center gap-4'>
+                <SidebarTrigger />
                 <ModeToggle lightText='light' darkText='dark' />
                 <Avatar>
                     <AvatarImage src="https://avatars.githubusercontent.com/u/12610160?v=4" alt="avatar" />
@@ -33,24 +36,9 @@ function Header() {
 export default function App() {
     const [selectedWeekDate, setSelectedWeekDate] = useState<Date>(new Date());
     return (
-        <div className='grid grid-cols-[250px,1fr] h-screen'>
-            <aside>
-                <h1>Decode</h1>
-                <nav className='p-4'>
-                    <ul className='space-y-4'>
-                        <li>
-                            <a href='#' className=''>Home</a>
-                        </li>
-                        <li>
-                            <a href='#' className=''>About</a>
-                        </li>
-                        <li>
-                            <a href='#' className=''>Contact</a>
-                        </li>
-                    </ul>
-                </nav>
-            </aside>
-            <main className='bg-secondary'>
+        <SidebarProvider>
+            <AppSidebar />
+             <main className='bg-secondary w-full'>
                 <Header />
                 <section className='container mx-auto p-4 space-y-4'>
                     <h2 className='text-xl font-bold'>Dashboard</h2>
@@ -200,6 +188,6 @@ export default function App() {
                     </section>
                 </section>
             </main>
-        </div>
+        </SidebarProvider>
     )
 }
